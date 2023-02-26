@@ -13,7 +13,7 @@ const Todo = dbTodo.define('todos',{
         allowNull:false
     },
     description:{
-        type:DataTypes.STRING(100),
+        type:DataTypes.TEXT,
         allowNull:false
     },
     completed:{ 
