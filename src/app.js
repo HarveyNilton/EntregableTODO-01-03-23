@@ -1,13 +1,13 @@
 
 const express = require('express')
-
+const cors = require('cors')
 const Todo =  require('./models/todo.models')
 const todosRouter = require('./routes/todos.routes')
 const dbTodo = require('./utils/db')
 
 const PORT = 3010
 const app = express()
-
+app.use(cors())
 app.use(express.json())
 app.use(todosRouter)
 
