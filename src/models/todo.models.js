@@ -17,7 +17,7 @@ const Todo = dbTodo.define('todos',{
         allowNull:false
     },
     completed:{ 
-        type:DataTypes.BOOLEAN(false),
+        type:DataTypes.BOOLEAN,
         
     }
 
