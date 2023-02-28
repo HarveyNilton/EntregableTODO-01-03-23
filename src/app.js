@@ -1,7 +1,6 @@
 
 const express = require('express')
 const cors = require('cors')
-const Todo =  require('./models/todo.models')
 const todosRouter = require('./routes/todos.routes')
 const dbTodo = require('./utils/db')
 
@@ -12,7 +11,6 @@ app.use(express.json())
 app.use(todosRouter)
 
 
-Todo
 
 dbTodo.authenticate()
     .then(() => console.log('Conexion exitosa'))
@@ -28,15 +26,6 @@ dbTodo.sync()
     .catch((error)=>{
         console.log(error);
     })
-
-
-
-app.get('/', (req, res) => {
-    res.send('TODO')
-})
-
-
-
 
 app.listen(PORT, () => {
     console.log(`Servidor funcionando en el puerto ${PORT}`);
